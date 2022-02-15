@@ -1,3 +1,4 @@
+import './setup'
 import express from 'express';
 import cors from 'cors';
 import * as AddressesController from './controller/addresses.controller'
@@ -8,6 +9,8 @@ app.use(express.json());
 
 
 app.post('/addresses',AddressesController.resolveDistances);
+
+
 
 app.get('/health', (req, res) => res.sendStatus(200));
 
