@@ -51,7 +51,7 @@ POST /addresses - needs an object with the following properties:
 
 ```
 
-From the following request, you'll get an array of addresses with the euclidian distance between them in km, divided by nearby (< 10km) and far spots:
+From the following request, you'll get an array of addresses  divided by nearby (< 10km) and far spots, with the euclidian distance between them in km:
 
 ```
 [
