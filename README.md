@@ -42,7 +42,7 @@ The easiest way to use the API is to send a post request (see the endpoint guide
 
 
 
-POST /addresses - needs an object with the following properties:
+POST /addresses - needs an object with addresses:
 
 ```
 {
