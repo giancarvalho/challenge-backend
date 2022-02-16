@@ -46,7 +46,7 @@ POST /addresses - needs an object with the following properties:
 
 ```
 {
-    addresses: ["Rua 19 de Fevereiro, 34 Botafogo, Rio de Janeiro RJ, 22280030", "Rua Rafael Marino Neto, 600 - Jardim Karaíba, Uberlândia - MG, 38411-186", "Av. Anselmo Alves dos Santos, 3351 - Tibery, Uberlândia - MG, 38408-150"]
+    addresses: ["Rua 19 de Fevereiro, 34 Botafogo, RJ", "Rua Rafael Marino Neto, 600  Uberlândia", "Av. Anselmo Alves dos Santos, 3351 - Tibery, Uberlândia - MG, 38408-150"]
 }
 
 ```
