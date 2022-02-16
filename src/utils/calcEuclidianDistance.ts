@@ -14,11 +14,8 @@ export default function calcEuclidianDistance(
   const dLat = deg2rad(latB - latA);
   const dLon = deg2rad(lonB - lonA);
   const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(deg2rad(latA)) *
-      Math.cos(deg2rad(latB)) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(deg2rad(latA)) * Math.cos(deg2rad(latB)) * Math.sin(dLon / 2) ** 2;
   const angularDistance = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
   const distanceInKM = earthRadius * angularDistance;
