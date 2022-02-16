@@ -19,20 +19,11 @@ This API calculates the geodistance from multiple given addresses.
 
 - npm
 - git
-- Google API KEY
+- [Google API KEY](https://developers.google.com/maps/documentation/geocoding/get-api-key)
 
 ## How to use
 
-The easiest way to use the API is to send a post request to the following URL: https://geodistance-challenge.herokuapp.com/addresses
-
-The api expects an object containg two or more addresses:
-
-```
-{
-    addresses: ["Rua 19 de Fevereiro, 34 Botafogo, Rio de Janeiro RJ, 22280030", "Rua Rafael Marino Neto, 600 - Jardim Karaíba, Uberlândia - MG, 38411-186", "Av. Anselmo Alves dos Santos, 3351 - Tibery, Uberlândia - MG, 38408-150"]
-}
-
-```
+The easiest way to use the API is to send a post request (see the endpoint guide below) to the following URL: https://geodistance-challenge.herokuapp.com/addresses
 
 ### Running locally
 
@@ -40,7 +31,7 @@ The api expects an object containg two or more addresses:
 
 2 - Run ```npm install``` 
 
-3 - Create an .env with your google api key (following the env.example)
+3 - Create an .env with your [google api key](https://developers.google.com/maps/documentation/geocoding/get-api-key) (following the env.example)
 
 4 - Run ```npm run dev```
 
@@ -60,7 +51,7 @@ POST /addresses - needs an object with the following properties:
 
 ```
 
-From the following request, you'll get an array of addresses with the euclidian distance between them in km:
+From the following request, you'll get an array of addresses with the euclidian distance between them in km, divide by nearby (< 10km) and far spots:
 
 ```
 [
