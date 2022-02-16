@@ -13,7 +13,7 @@ interface address {
 async function resolveDistances(addresses: string[]) {
   if (addresses.length < 2)
     throw new BadRequest("There should be a minimum of two addresses");
-
+  console.log(addresses.length);
   const searchedAddresses = await Promise.all(
     addresses.map(
       async (address, index) =>
