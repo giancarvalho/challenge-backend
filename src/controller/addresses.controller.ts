@@ -1,10 +1,18 @@
-import {Request, Response} from 'express';
+import { Request, Response } from "express";
+import * as AddressesServices from "../services/addresses.service";
 
-function resolveDistances(req: Request, res: Response){
+async function resolveDistances(req: Request, res: Response) {
+  try {
+    const { addresses } = req.body;
 
-  return res.sendStatus(200);
+    if (!addresses) return res.sendStatus(400);
+
+    const result = await AddressesServices.resolveDistances(addresses);
+
+    return res.send(result);
+  } catch (error) {
+    return res.sendStatus(500);
+  }
 }
 
-export {
-  resolveDistances,
-}
+export { resolveDistances };
