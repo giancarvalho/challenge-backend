@@ -4,7 +4,7 @@ This API calculates the geodistance from multiple given addresses.
 
 ## Features
 
-- Get latitude and logitude location of address
+- Get latitude and longitude of addresses
 - Get distance in km from other given addresses
 
 ## Technologies
