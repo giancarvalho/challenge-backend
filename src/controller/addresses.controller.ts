@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import * as AddressesServices from "../services/addresses.service";
+import BadRequest from "../utils/BadRequestError";
 
 async function resolveDistances(req: Request, res: Response) {
   try {
@@ -11,6 +12,10 @@ async function resolveDistances(req: Request, res: Response) {
 
     return res.send(result);
   } catch (error) {
+    if (error instanceof BadRequest)
+      return res.status(error.code).send(error.message);
+
+    console.log(error);
     return res.sendStatus(500);
   }
 }

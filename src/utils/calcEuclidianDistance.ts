@@ -9,7 +9,7 @@ export default function calcEuclidianDistance(
 ) {
   const { lat: latA, lng: lonA } = pointA;
   const { lat: latB, lng: lonB } = pointB;
-
+  //haversine formula
   const earthRadius = 6371;
   const dLat = deg2rad(latB - latA);
   const dLon = deg2rad(lonB - lonA);
@@ -19,10 +19,10 @@ export default function calcEuclidianDistance(
       Math.cos(deg2rad(latB)) *
       Math.sin(dLon / 2) *
       Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const angularDistance = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
-  const d = earthRadius * c;
-  return d;
+  const distanceInKM = earthRadius * angularDistance;
+  return Math.round(distanceInKM * 1e3) / 1e3;
 }
 
 function deg2rad(deg: number) {
