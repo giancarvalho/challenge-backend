@@ -15,7 +15,6 @@ async function resolveDistances(req: Request, res: Response) {
     if (error instanceof BadRequest)
       return res.status(error.code).send(error.message);
 
-    console.log(error);
     return res.sendStatus(500);
   }
 }
