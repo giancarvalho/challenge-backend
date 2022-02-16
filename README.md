@@ -1,6 +1,6 @@
 # Geodistance
 
-This API calculates the geodistance from multiple given addresses. 
+This API calculates the euclidian distance from multiple given addresses. 
 
 ## Features
 
